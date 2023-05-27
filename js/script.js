@@ -4,8 +4,23 @@ const generatePasswordElement = document.querySelector("#generated-password");
 
 //Funções
 const getLetterLowerCase = () => {
-    console.log(String.fromCharCode(Math.floor(Math.random() * 26)));
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 };
+
+const getLetterUpperCase = () => {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+};
+
+const getNumber = () => {
+    return Math.floor(Math.random() * 10).toString()
+};
+
+const getSymbol = () => {
+    const symbols = "(){}[]=<>/,.!@#$%&*+-";
+};
+
+console.log(getNumber());
+
 //Eventos
 generatePasswordButton.addEventListener("click", () =>{
     console.log("teste");
