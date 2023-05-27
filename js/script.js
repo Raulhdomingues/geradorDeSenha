@@ -17,6 +17,7 @@ const getNumber = () => {
 
 const getSymbol = () => {
     const symbols = "(){}[]=<>/,.!@#$%&*+-";
+    return symbols[Math.floor(Math.random() * symbols.length)];
 };
 
 console.log(getNumber());
