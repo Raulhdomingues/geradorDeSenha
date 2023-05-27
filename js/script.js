@@ -33,8 +33,9 @@ const generatePassword = (getLetterLowerCase, getLetterUpperCase, getNumber, get
         getSymbol,
     ]
 
-    for(i = 0; < passwordLength; i = i + 4){
+    for(i = 0; i < passwordLength; i = i + 4){
         generators.forEach(() => {
+
             const randomValue = 
             generators[Math.floor(Math.random() * generators.length)]();
 
@@ -44,10 +45,16 @@ const generatePassword = (getLetterLowerCase, getLetterUpperCase, getNumber, get
 
     password = password.slice(0, passwordLength);
 
-    generatedPasswordElement.querySelector
+    generatedPasswordElement.style.display = "block";
+    generatedPasswordElement.querySelector("h4").innerText = password;
 };
 
 //Eventos
-generatePasswordButton.addEventListener("click", () =>{
-    
+generatePasswordButton.addEventListener("click", () => {
+    generatePassword ( 
+        getLetterLowerCase,
+        getLetterUpperCase,
+        getNumber,
+        getSymbol
+    );
 });
